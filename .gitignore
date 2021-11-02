@@ -1,0 +1,6 @@
+.env
+db_data
+
+.next
+.yalc
+node_modules/
