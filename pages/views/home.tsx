@@ -1,5 +1,6 @@
 import * as React from "react";
 import { NextPage, NextPageContext } from "next";
+import styles from "./home.module.css";
 
 type Props = {
   query: { name?: string };
@@ -11,6 +12,9 @@ const Home: NextPage<Props> = ({ query }) => {
   return (
     <div>
       <div>Hello, {greetName}!</div>
+      <button type="button" className={styles.error}>
+        Destroy
+      </button>
     </div>
   );
 };

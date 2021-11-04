@@ -14,9 +14,7 @@ class RootDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <title>amamov</title>
-        </Head>
+        <Head>{/*  */}</Head>
         <body>
           <Main />
           <NextScript />
