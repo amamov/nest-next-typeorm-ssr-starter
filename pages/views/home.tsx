@@ -1,6 +1,7 @@
 import * as React from "react";
 import { NextPage, NextPageContext } from "next";
 import styles from "./home.module.css";
+import Image from "next/image";
 
 type Props = {
   query: { name?: string };
@@ -12,6 +13,7 @@ const Home: NextPage<Props> = ({ query }) => {
   return (
     <div>
       <div>Hello, {greetName}!</div>
+      <Image src="/test.png" alt="test" width="64" height="64" />
       <button type="button" className={styles.error}>
         Destroy
       </button>
