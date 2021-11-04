@@ -2,6 +2,8 @@
 
 > NestJS + NextJS + Typeorm MVC SSR Starter with [nest-next](https://github.com/kyle-mccarthy/nest-next) package
 
+"Just Coding!"
+
 ## Tech Stack
 
 - node, npm, typescript, docker, docker-compose, nodemon, tsx
@@ -9,6 +11,13 @@
 - jest, supertest
 - nestjs(version 8), nextjs, typeorm
 - nest-next
+
+## Structure
+
+- `pages` : client layer with nextjs
+- `public` : served static files
+- `server` : server layer with nestjs
+- `nginx` : nginx to be a production-level dockerizing target that acts as a reverse proxy
 
 ## Getting Start
 
