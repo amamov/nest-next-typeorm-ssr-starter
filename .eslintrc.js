@@ -40,15 +40,16 @@ module.exports = {
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-ignore": 0,
-    // "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/explicit-function-return-type": [
-      "warn",
-      {
-        allowExpressions: true,
-        allowTypedFunctionExpressions: true,
-        allowHigherOrderFunctions: true,
-      },
-    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    // "@typescript-eslint/explicit-function-return-type": [
+    //   "warn",
+    //   {
+    //     allowExpressions: true,
+    //     allowTypedFunctionExpressions: true,
+    //     allowHigherOrderFunctions: true,
+    //   },
+    // ],
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-floating-promises": 1,
   },
 };

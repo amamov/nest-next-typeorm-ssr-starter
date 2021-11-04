@@ -1,9 +1,9 @@
 import * as React from "react";
 import { NextPage, NextPageContext } from "next";
 
-interface Props {
+type Props = {
   query: { name?: string };
-}
+};
 
 const Home: NextPage<Props> = ({ query }) => {
   const greetName = query.name ? query.name : "World";

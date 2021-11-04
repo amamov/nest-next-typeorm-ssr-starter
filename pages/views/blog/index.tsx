@@ -1,8 +1,13 @@
 import * as React from "react";
 import { NextPage, NextPageContext } from "next";
-import { IPost } from "../../../types";
-import PostPreview from "../../../components/post-preview";
-import { BlogService } from "../../../server/blog/blog.service";
+import { IPost } from "types";
+import PostPreview from "pages/components/post-preview";
+import { BlogService } from "server/blog/blog.service";
+import dynamic from "next/dynamic";
+
+const ToastEditor = dynamic(() => import("pages/components/Editor"), {
+  ssr: false,
+});
 
 interface Props {
   posts: IPost[];
@@ -21,6 +26,7 @@ const Blog: NextPage<Props> = ({ posts, source }) => {
       <div style={{ fontStyle: "italic", fontSize: 14 }}>
         this page was rendered on the {source}
       </div>
+      <ToastEditor />
     </div>
   );
 };
