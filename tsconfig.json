@@ -5,6 +5,7 @@
     "jsx": "preserve",
     "strict": true,
     "pretty": true,
+    "incremental": true,
     "noImplicitAny": true,
     "alwaysStrict": true,
     "noImplicitReturns": true,
@@ -12,7 +13,7 @@
     "outDir": ".next",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true /* import * as express ... */,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "sourceMap": true,
@@ -34,7 +35,7 @@
   },
   "include": [
     "./pages/**/*",
-    "./src/**/*",
+    "./server/**/*",
     "./ui/**/*",
     "types.ts"
   ],

@@ -3,52 +3,52 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+    jest: true,
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-  extends: [
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: 'module',
-    project: './tsconfig.json',
+    sourceType: "module",
+    project: "./tsconfig.json",
     tsconfigRootDir: __dirname,
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
+  extends: [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+  ],
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+  },
+  plugins: ["react", "@typescript-eslint", "prettier"],
+  ignorePatterns: [".eslintrc.js", "node_modules", ".next", "*.d.ts"],
   rules: {
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'no-unused-vars': 0,
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-    ],
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/ban-ts-ignore': 0,
-    '@typescript-eslint/explicit-function-return-type': [
-      'warn',
+    "no-console": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { args: "none" }],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-ignore": 0,
+    // "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
       {
         allowExpressions: true,
         allowTypedFunctionExpressions: true,
         allowHigherOrderFunctions: true,
       },
     ],
-    '@typescript-eslint/no-floating-promises': 1,
+    "@typescript-eslint/no-floating-promises": 1,
   },
 };
-

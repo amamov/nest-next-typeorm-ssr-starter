@@ -12,6 +12,6 @@
     "noEmit": false,
     "allowJs": false
   },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["./server/**/*"],
+  "exclude": ["node_modules", "**/*spec.ts"]
 }
