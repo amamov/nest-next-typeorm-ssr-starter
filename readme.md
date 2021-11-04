@@ -2,7 +2,7 @@
 
 > NestJS + NextJS + Typeorm MVC SSR Starter with [nest-next](https://github.com/kyle-mccarthy/nest-next) package
 
-"Just Coding!"
+<center>"Just Coding!"</center>
 
 ## Tech Stack
 
