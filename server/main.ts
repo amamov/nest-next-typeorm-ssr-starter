@@ -2,6 +2,7 @@ import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
 import Next from "next";
 import { RenderModule } from "nest-next";
+import { Logger } from "@nestjs/common";
 
 async function bootstrap(): Promise<void> {
   const server = await NestFactory.create(AppModule);
@@ -14,4 +15,6 @@ async function bootstrap(): Promise<void> {
   await server.listen(5500);
 }
 
-bootstrap();
+bootstrap().catch((error) => {
+  new Logger("bootstrap").error(error);
+});
