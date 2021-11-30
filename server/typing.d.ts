@@ -6,7 +6,7 @@ declare global {
 
     interface Request {
       token?: string;
-      user?: Record<string, any>;
+      user?: any;
     }
   }
 }
